@@ -45,7 +45,7 @@ export default {
           return `test_${name}_${hash}`;
         },
       },
-      extract: "css/test-library.min.css",
+      extract: "styles/global.min.scss",
       extensions: [".scss"],
       use: ["sass"],
       minimize: true,
