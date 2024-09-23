@@ -1,5 +1,5 @@
 "use client";
-import { ButtonProps } from "@/components/Button";
+import { ButtonProps } from "../../Button";
 import { forwardRef } from "react";
 import styles from "./styles.module.scss";
 import "./variables.scss";
@@ -24,7 +24,7 @@ const Trigger = forwardRef<HTMLButtonElement, TriggerProps>(
         {children}
       </button>
     );
-  },
+  }
 );
 
 Trigger.displayName = "Trigger";

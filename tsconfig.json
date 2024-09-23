@@ -1,21 +1,28 @@
 {
   "compilerOptions": {
-    "outDir": "dist", // Specifies the output directory for compiled JavaScript files
-    "target": "ES6",
-    "lib": ["ES6", "DOM"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "declaration": true,
-    "declarationDir": "./dist",
-    "module": "CommonJS",
-    "jsx": "react-jsx",
-    "esModuleInterop": true,
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./src/*"]
     },
-    "inlineSourceMap": true
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "moduleResolution": "node",
+    "target": "ESnext",
+    "module": "ESNext",
+    "allowJs": true,
+    "checkJs": true,
+    "jsx": "react-jsx",
+    "lib": ["DOM", "ESNext"],
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "baseUrl": "src",
+    "outDir": "dist",
+    "declaration": true,
+    "emitDeclarationOnly": true
   },
-  "include": [".d.ts", "**/*.ts", "**/*.tsx", "src/**/*", "src/index.js"],
-  "exclude": ["node_modules", "babel.config.js", "dist"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
 }

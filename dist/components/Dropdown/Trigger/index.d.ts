@@ -1,4 +1,5 @@
-import { ButtonProps } from "@/components/Button";
+/// <reference types="react" />
+import { ButtonProps } from "../../Button";
 import "./variables.scss";
 export interface TriggerProps extends ButtonProps {
     children: any;
